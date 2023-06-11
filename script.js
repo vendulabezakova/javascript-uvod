@@ -22,12 +22,12 @@ console.log(Math.ceil(3.4))
 console.log(Math.random())
 
 //cvičení 1 - výplata (https://kodim.cz/kurzy/uvod-do-js/prvni-krucky/javascript/cv-vyrazy-funkce)
-
+//složité řešení :)
 console.log(7 * 21 * 265)
 console.log(38955 * 0.6)
 console.log(38955 - 23373)
 console.log(15582 * 0.15)
-
+//jednoduché řešení :)
 console.log("Zaplatím daň " + Math.floor(7 * 265 * 21 * (1 - 0.6) * 0.15) + " Kč.")
 
 //cvičení 2 - délka filmu
@@ -35,3 +35,4 @@ console.log("Pán prstenů trvá " + Math.floor (223 / 60) + " hodiny " + 223 % 
 
 //cvičení 3 - mailovka
 console.log("vendula" + "." + "bezakova" + "@mujmail.com")
+
