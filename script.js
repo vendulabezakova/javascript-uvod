@@ -81,8 +81,71 @@ document.body.innerHTML = "<p>Běžec doběhne v " + konec + " hodin.</p>"
 //prompt("Zadej věk: ")
 
 //cvičení vstup a výstup
-let name = prompt("Zadejté své jméno");
+let name = prompt("Zadejte své jméno");
 let age = Number(prompt("Zadejte svůj věk"));
-let info = (name + ", " + "věk: " + age);
+info = (name + ", " + "věk: " + age);
 document.body.innerHTML = info
+
+//podmínky - pravidvá podmínka začíná vždy za podmínkou - podmínka níže navazuje na vstup výše :) v podmínce používáme === (3 rovnítka)
+
+const vek = age
+if(vek >= 18) {
+    console.log("Vítej na stránkách.")
+} else {
+    console.log("Přijď, až ti bude 18.")
+}
+
+//podmínky s více větvěmi (nastudovat: JS switch)
+
+znamka = 4
+
+if(znamka === 1) {
+    console.log("Výborný")
+} else if (znamka === 2) {
+    console.log("Chvalitebný")
+} else if (znamka === 3) {
+    console.log("Dobrý")
+} else if (znamka === 4) {
+    console.log("Dostatečný")
+} else if (znamka === 5) {
+    console.log("Nedostatečný")
+}
+
+//vnořené podmínky - ve větvích lze mít více podmínek a příkazů, důležité je odsazování kvůli čitelnosti kódu
+
+//pravdivostní hodnoty (boolean)
+
+inStock = true
+inStock2 = false
+
+//cvičení podmínky 1 - přihlášení
+
+let login = prompt("Zadejte přihlašovací jméno");
+
+if(login === "krakonos") {
+    let password = prompt("Zadejte heslo");
+    if(password === "sojka") {
+        console.log("Heslo je správné.")
+    } else {
+        console.log("Heslo není správné.")
+    }
+    console.log("Uživatelské jméno je správné.")
+} else {
+    console.log("Uživatelské jméno není správné. Zadejte znovu.")
+}
+
+let age2 = prompt("Zadejte svůj věk")
+plnaCena = 12
+
+if(age2 < 6) {
+    console.log("Máš vstup zdarma.")
+} else if (age2 > 6 && age2 < 26) {
+    console.log ("Cena je " + Math.ceil(plnaCena * 0.35) + ".")
+} else if (age2 > 26 && age <= 64) {
+    console.log ("Cena je " + plnaCena + ".")
+} else if (age2 >= 65) {
+    console.log ("Cena pro seniory je " + plnaCena / 2 + ".")
+} //dodělat - chyba
+
+//objekty - 
 
