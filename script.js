@@ -229,7 +229,69 @@ const apartment = {
   console.log("Mesto: " + apartment.city + " městská část: " + apartment.district)
 
   apartment.status = "taken"
-  console.log("STav inzerátu: " + apartment.status + ".")
+  console.log("Stav inzerátu: " + apartment.status + ".")
 
-  //cvičení 3 - divadlo
+//cvičení 3 - divadlo
+
+//Cyklus FOR - nejpoužívanější cyklus, cyklus prochází pole prvek po prvku a pro každý z nich vykonat blok kódu. Lze mít cydklus v cyklu. V cyklu lze používat podmínky.
+
+const znamky = [1, 3, 2, 1, 1, 1, 2]
+for (const z of znamky) {
+  console.log(z)
+}
+
+const mesta = [
+    { nazev: 'Praha', obyvatel: 1275406 },
+    { nazev: 'Brno', obyvatel: 379466 },
+    { nazev: 'Ostrava', obyvatel: 279791 },
+    { nazev: 'Plzeň', obyvatel: 168733 },
+    { nazev: 'Liberec', obyvatel: 102951 },
+    { nazev: 'Olomouc', obyvatel: 99496 },
+    { nazev: 'České Budějovice', obyvatel: 93426 },
+    { nazev: 'Hradec Králové', obyvatel: 90596 },
+    { nazev: 'Ústí nad Labem', obyvatel: 90378 },
+    { nazev: 'Pardubice', obyvatel: 88520 },
+  ];
   
+  for (const mesto of mesta) { //mesto = docasna proměnná
+    if (mesto.obyvatel > 100000) {
+      document.body.innerHTML += '<p><strong>' + mesto.nazev + '</strong></p>';
+    } else {
+      document.body.innerHTML += '<p>' + mesto.nazev + '</p>';
+    }
+  }
+
+  //cvičení cykly
+
+  const hodnoceni = [7, 9, 6, 7, 9, 8];
+  for (const rate of hodnoceni) {
+    document.body.innerHTML += "<p>" + rate + "/10</p>"
+  }
+
+//cykly - výdaje
+const vydaje2 = [
+    { jmeno: 'Petr', zbozi: 'Prací prášek', utrata: 240 },
+    { jmeno: 'Ondra', zbozi: 'Savo', utrata: 80 },
+    { jmeno: 'Pavla', zbozi: 'Toaleťák', utrata: 65 },
+    { jmeno: 'Zuzka', zbozi: 'Mýdlo', utrata: 50 },
+    { jmeno: 'Pavla', zbozi: 'Závěs do koupelny', utrata: 350 },
+    { jmeno: 'Libor', zbozi: 'Pivka na kolaudačku', utrata: 124 },
+    { jmeno: 'Petr', zbozi: 'Pytle na odpadky', utrata: 75 },
+    { jmeno: 'Míša', zbozi: 'Utěrky na nádobí', utrata: 130 },
+    { jmeno: 'Ondra', zbozi: 'Toaleťák', utrata: 120 },
+    { jmeno: 'Míša', zbozi: 'Pečící papír', utrata: 30 },
+    { jmeno: 'Zuzka', zbozi: 'Savo', utrata: 80 },
+    { jmeno: 'Petr', zbozi: 'Tapeta na záchod', utrata: 315 },
+    { jmeno: 'Ondra', zbozi: 'Toaleťák', utrata: 6 },
+  ]
+
+    for (const spolubydlici of vydaje2) {
+        document.body.innerHTML = vydaje2.jmeno
+    } // dodělat
+
+    console.log("Petrovo zboží:")
+    for (const spolubydlici of vydaje2) {
+        if(spolubydlici.jmeno === "Petr") {
+            console.log(spolubydlici.zbozi)
+        }
+    }
