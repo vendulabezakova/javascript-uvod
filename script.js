@@ -36,3 +36,53 @@ console.log("Pán prstenů trvá " + Math.floor (223 / 60) + " hodiny " + 223 % 
 //cvičení 3 - mailovka
 console.log("vendula" + "." + "bezakova" + "@mujmail.com")
 
+//webové stránky - pomocí JS lze měnit HTML, validovat data
+//html funguje na DOM (document object) - každá část webu je reprezentovaná objektem, který si můžeme odchytit a pracovat s ním, např. body, p, h2
+
+//proměnné - základní stavebí kámen, potřebujeme ukládat různá data v různých datových typech (formátech). Např. buňky v Excelu, vzorec vyvolává buňky, ve kterých jsou hodnoty (= proměnné). V JS je několik cest, jak deklarovat proměnnou: let, var, const. Var se už z bezpečnostních důvodů nepoužívá, je jen ve starších dokumentacích. Konstanta je neměnná. Proměnnou lze kdykoliv v průběhu programu změnit. V rámci JS je žádoucí mít proměnnou jako konstantu, např. odkazy na API, odkazy na HTML prvky - nebudou se měnit. Pokud nad tím nechce programátor přemýšlet, píše všude proměnné. Název proměnných je zažitý mezi programátory v camelCase (malé první písmeno, druhé slovo začíná velkým písmenem). Proměnná by měla odpovídat tomu, co v ní je, ne jen písmenné odznačení. Program se pouští odshora dolů, proto musí být první deklarace a pak proměnnou můžu vypsat (jinak error).
+
+let cislo1 = 100
+const cislo2 = 200
+
+cislo1 = 200
+
+console.log(cislo1)
+console.log(cislo2)
+
+let hodinovka = 1500
+let pocetHodin = 160
+let vyplata = hodinovka * pocetHodin
+
+console.log(vyplata)
+
+//cviceni 1 - vypsat random
+//document.body.innerHTML = "<p>Random číslo pro dnešní den je " + Math.random() + ".</p>"
+console.log("Random číslo pro dnešní den je " + Math.random() + ".")
+
+//cviceni 2 - převod měny
+let wageInEur = 20
+let exchangeRate = 26.58
+
+wageInCzk = Math.floor(wageInEur * exchangeRate)
+
+console.log("Hodinová mzda v korunách je " + wageInCzk + " Kč.")
+
+//document.body.innerHTML = "<h1>Hodinová mzda v korunách je " + wageInCzk + " Kč</h1>"
+
+//bonus - ultramaraton
+let start = 15
+let delka = 12
+
+konec = (start + delka) % 24
+console.log("Běžec doběhne v " + konec + " hodin.")
+document.body.innerHTML = "<p>Běžec doběhne v " + konec + " hodin.</p>"
+
+//Funkce prompt
+//prompt("Zadej věk: ")
+
+//cvičení vstup a výstup
+let name = prompt("Zadejté své jméno");
+let age = Number(prompt("Zadejte svůj věk"));
+let info = (name + ", " + "věk: " + age);
+document.body.innerHTML = info
+
