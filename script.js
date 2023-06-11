@@ -147,5 +147,89 @@ if(age2 < 6) {
     console.log ("Cena pro seniory je " + plnaCena / 2 + ".")
 } //dodělat - chyba
 
-//objekty - 
+//objekty - složitější datové struktury ve formátu klíč: hodnota aneb Proměnná s více hodnotami. Formát JSON (JavaScript Object Notation) - formát pro přenos dat. Lze vnořovat do sebe
 
+const address = {
+    streetName: 'Pod Kaštany',
+    number: 31,
+    city: 'Horní Dlouhonosy',
+    postalCode: '123 11',
+  };
+
+  console.log(address.city)
+
+  //pole - hodnoty v [] - něco jako množina. Každé pole na pozadá funguje jako indexace, každá hodnota má indexové označení, začíná nulou
+
+const participant = ["Petr", "Roman", "Standa", "Eliška", "Vendy", "Ondřej", "Zuzka"]
+console.log(participant[5])
+
+//objekty + pole
+
+const vydaje = [
+    { jmeno: 'Petr', zbozi: 'Prací prášek', cena: 240 },
+    { jmeno: 'Ondra', zbozi: 'Savo', cena: 80 },
+    { jmeno: 'Pavla', zbozi: 'Toaleťák', cena: 65 },
+    { jmeno: 'Zuzka', zbozi: 'Mýdlo', cena: 50 },
+    { jmeno: 'Pavla', zbozi: 'Závěs do koupelny', cena: 350 },
+    { jmeno: 'Libor', zbozi: 'Pivka na kolaudačku', cena: 124 },
+    { jmeno: 'Petr', zbozi: 'Pytle na odpadky', cena: 75 },
+    { jmeno: 'Míša', zbozi: 'Utěrky na nádobí', cena: 130 },
+    { jmeno: 'Ondra', zbozi: { nazev: "toaletak", cena: [10, 20, 30]}, cena: [10, 20, 30] },
+    { jmeno: 'Míša', zbozi: 'Pečící papír', cena: 30 },
+    { jmeno: 'Zuzka', zbozi: 'Savo', cena: 80 },
+    { jmeno: 'Petr', zbozi: 'Tapeta na záchod', cena: 315 },
+    { jmeno: 'Ondra', zbozi: 'Toaleťák', cena: 6 },
+  ]
+
+  console.log(vydaje[8].zbozi.cena[0])
+
+  //cvičení objekty a pole 1
+
+  let book1 = {
+    title: "1984",
+    author: {
+        name: "George",
+        surname: "Orwell"
+    },
+    pages: 296,
+    paperback: true,
+    stock: true,
+    price: 379,
+  }
+
+//cvičení 2 - realitka
+const apartment = {
+    type: 'rent',
+    disposition: '3+1',
+    area: {
+      floorage: 100,
+      balcony: 2,
+      units: 'sqm',
+    },
+    city: 'Prague',
+    district: 'Old Town',
+    price: {
+      rent: 28000,
+      fees: {
+        water: 1000,
+        energy: 2500,
+        services: 560,
+      },
+      currency: 'czk',
+    },
+    ownership: 'personal',
+    condition: 'renovated',
+    status: 'free',
+    floor: 3,
+  };
+
+  console.log(apartment.disposition)
+  console.log("Měsíční nájem bez poplatků je " + apartment.price.rent + " Kč.")
+  console.log("Byt má výměru " + apartment.area.floorage+apartment.area.balcony + " m2 včetně balkonu.")
+  console.log("Mesto: " + apartment.city + " městská část: " + apartment.district)
+
+  apartment.status = "taken"
+  console.log("STav inzerátu: " + apartment.status + ".")
+
+  //cvičení 3 - divadlo
+  
